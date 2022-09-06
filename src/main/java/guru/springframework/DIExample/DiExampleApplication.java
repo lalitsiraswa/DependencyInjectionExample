@@ -23,8 +23,10 @@ public class DiExampleApplication {
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
 
-		System.out.println("------------------Setter Based Dependency Injection--------------------");
+		System.out.println("------------------Constructor Based Dependency Injection--------------------");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("-----------------------------------------------------------------------");
 	}
 }
