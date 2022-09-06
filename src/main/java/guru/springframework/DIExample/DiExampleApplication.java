@@ -12,9 +12,11 @@ import org.springframework.context.ApplicationContext;
 public class DiExampleApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiExampleApplication.class, args);
+		System.out.println("------------------------ PRIMARY BEAN -----------------------------");
 		MyController myController = (MyController) ctx.getBean("myController");
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+//		String greeting = myController.sayHello();
+//		System.out.println(greeting);
+		System.out.println(myController.sayHello());
 		System.out.println("------------------Property Based Dependency Injection--------------------");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
