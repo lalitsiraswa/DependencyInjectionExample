@@ -29,5 +29,9 @@ public class DiExampleApplication {
 		System.out.println("--------------------------- SPRING PROFILE ---------------------------------");
 		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
 		System.out.println(i18nController.sayHello());
+
+		System.out.println("--------------------------- PER SERVICE ASSIGNMENT ---------------------------------");
+		PetController petController = ctx.getBean("petController", PetController.class);
+		System.out.println(petController.whichPetIsTheBest());
 	}
 }
