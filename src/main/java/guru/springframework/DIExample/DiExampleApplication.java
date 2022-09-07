@@ -1,9 +1,6 @@
 package guru.springframework.DIExample;
 
-import guru.springframework.DIExample.controllers.ConstructorInjectedController;
-import guru.springframework.DIExample.controllers.MyController;
-import guru.springframework.DIExample.controllers.PropertyInjectedController;
-import guru.springframework.DIExample.controllers.SetterInjectedController;
+import guru.springframework.DIExample.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -29,6 +26,8 @@ public class DiExampleApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
 
-		System.out.println("-----------------------------------------------------------------------");
+		System.out.println("--------------------------- SPRING PROFILE ---------------------------------");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 	}
 }
