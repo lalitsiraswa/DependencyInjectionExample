@@ -4,7 +4,10 @@ import guru.springframework.DIExample.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+// Default is @ComponentScan(basePackages = "guru.springframework.DIExample")
+@ComponentScan(basePackages = {"com.springframework.pets", "guru.springframework.DIExample"})
 @SpringBootApplication
 public class DiExampleApplication {
 	public static void main(String[] args) {
