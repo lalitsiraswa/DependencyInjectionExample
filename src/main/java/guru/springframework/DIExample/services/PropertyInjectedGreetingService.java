@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 //@Service
 //@Component
 //@Controller
-@Service
+//@Service
 public class PropertyInjectedGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {

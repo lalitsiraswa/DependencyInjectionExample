@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 //@Component
-@Controller
+//@Controller
 public class SetterInjectedController {
 
     private GreetingService greetingService;
